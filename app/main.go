@@ -19,4 +19,6 @@ func setupRouter() *gin.Engine {
 
 func main() {
 	fmt.Println(calculate.Sqrt(4))
+	r := setupRouter()
+	r.Run(":8888")
 }
