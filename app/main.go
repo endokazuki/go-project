@@ -2,9 +2,20 @@ package main
 
 import (
 	"fmt"
+	"net/http"
 
-	"github.com/endokazuki/go-project/app/calculate"
+	"github.com/gin-gonic/gin"
+
+	"go-project/app/calculate"
 )
+
+func setupRouter() *gin.Engine {
+	r := gin.Default()
+	r.GET("/ping", func(c *gin.Context) {
+		c.String(http.StatusOK, "pong")
+	})
+	return r
+}
 
 func main() {
 	fmt.Println(calculate.Sqrt(4))
