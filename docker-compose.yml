@@ -20,16 +20,16 @@ services:
     volumes:
       - ./db/mysql_data:/var/lib/mysql
 
-  web:
-    container_name: 'web_go'
+  app:
+    container_name: 'app_go'
     build:
-      context: ./go_docker
+      context: ./app
       dockerfile: Dockerfile
       target: dev
     tty: true
     stdin_open: true
     volumes:
-      - .:/go/src/app
+      - ./app:/go/src/app
     ports:
       - 8888:8888
     depends_on:
