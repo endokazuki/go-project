@@ -1,4 +1,4 @@
-FROM golang:1.15.7-alpine as dev
+FROM golang:1.18.10-alpine as dev
 
 ENV ROOT=/go/src/app
 ENV CGO_ENABLED 0
@@ -7,12 +7,12 @@ WORKDIR ${ROOT}
 RUN apk update && apk add git
 COPY go.mod go.sum ./
 RUN go mod download
-EXPOSE 8080
+EXPOSE 8888
 
 CMD ["go", "run", "main.go"]
 
 
-FROM golang:1.15.7-alpine as builder
+FROM golang:1.18.10-alpine as builder
 
 ENV ROOT=/go/src/app
 WORKDIR ${ROOT}
@@ -31,5 +31,5 @@ ENV ROOT=/go/src/app
 WORKDIR ${ROOT}
 COPY --from=builder ${ROOT}/binary ${ROOT}
 
-EXPOSE 8080
+EXPOSE 8888
 CMD ["/go/src/app/binary"]

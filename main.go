@@ -1,15 +1,23 @@
 package main
 
 import (
+	"calculate"
 	"fmt"
-	"net/http"
 )
 
-func handler(writer http.ResponseWriter, _ *http.Request) {
-	fmt.Fprint(writer, "hello_world!!")
-}
-
 func main() {
-	http.HandleFunc("/", handler)
-	http.ListenAndServe(":8888", nil)
+	// fmt.Println("When's Saturday?")
+	// fmt.Println(time.Now().Weekday())
+	// today := time.Now().Weekday()
+	// switch time.Saturday {
+	// case today + 0:
+	// 	fmt.Println("Today.")
+	// case today + 1:
+	// 	fmt.Println("Tomorrow.")
+	// case today + 2:
+	// 	fmt.Println("In two days.")
+	// default:
+	// 	fmt.Println("Too far away.")
+	// }
+	fmt.Println(calculate.Sqrt(4))
 }

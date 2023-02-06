@@ -1,4 +1,4 @@
-FROM mysql:5.7-debian
+FROM mysql:8.0-debian
 
 # MySQLを日本語対応にするための設定
 RUN apt-get update
