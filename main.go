@@ -1,8 +1,9 @@
 package main
 
 import (
-	"calculate"
 	"fmt"
+
+	"github.com/endokazuki/go-project/calculate"
 )
 
 func main() {
