@@ -1,24 +1,14 @@
 package main
 
 import (
-	"fmt"
-	"net/http"
+	"go-project/app/practice"
 
-	"github.com/gin-gonic/gin"
-
-	"go-project/app/calculate"
+	"golang.org/x/tour/pic"
+	"golang.org/x/tour/wc"
 )
 
-func setupRouter() *gin.Engine {
-	r := gin.Default()
-	r.GET("/ping", func(c *gin.Context) {
-		c.String(http.StatusOK, "pong")
-	})
-	return r
-}
-
 func main() {
-	fmt.Println(calculate.Sqrt(4))
-	r := setupRouter()
-	r.Run(":8888")
+	practice.Sqrt(4)
+	pic.Show(practice.Pic)
+	wc.Test(practice.WordCount)
 }
