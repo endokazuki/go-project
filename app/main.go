@@ -17,4 +17,7 @@ func main() {
 		fmt.Println(f())
 	}
 	practice.Action()
+	fmt.Println(practice.SqrtStrict(2))
+	fmt.Println(practice.SqrtStrict(-2))
+	fmt.Println(practice.SqrtStrict(0))
 }
