@@ -5,6 +5,7 @@ import (
 	"go-project/app/practice"
 
 	"golang.org/x/tour/pic"
+
 	"golang.org/x/tour/wc"
 )
 
@@ -19,5 +20,5 @@ func main() {
 	practice.Action()
 	fmt.Println(practice.SqrtStrict(2))
 	fmt.Println(practice.SqrtStrict(-2))
-	fmt.Println(practice.SqrtStrict(0))
+	practice.ReadAction(0)
 }
