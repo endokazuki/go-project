@@ -20,5 +20,6 @@ func main() {
 	practice.Action()
 	fmt.Println(practice.SqrtStrict(2))
 	fmt.Println(practice.SqrtStrict(-2))
-	practice.ReadAction(0)
+	practice.ReadAction()
+	practice.ImageAction()
 }
